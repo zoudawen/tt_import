@@ -1,11 +1,15 @@
-from distutils.core import setup
+# from distutils.core import setup
+from setuptools import setup, find_packages
+import fun
+import unittest
 
-setup(name='tt_import',
-      version='1.0',
-      description='hello',
-      author='Dawen Zou',
-      author_email='dz@gmail.com',
-      url='https://github.com/zoudawen/tt_import/',
-      packages=['tt_import','tt_import.fun','fun'],
-      py_modules=['tt_import','tt_import.fun','fun']
-     )
+
+setup(name=covertutils.__name__,
+      version="1.0"
+      description='test',
+      url="https://github.com/zoudawen/tt_import/",
+      author="dzou",
+      author_email="dz@gmail.com",
+      license='MIT',
+      packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
+	  )
